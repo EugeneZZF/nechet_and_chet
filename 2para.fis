@@ -1,0 +1,46 @@
+[System]
+Name='2para'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='God_vipuska'
+Range=[1998 2025]
+NumMFs=3
+MF1='star':'trapmf',[1988 1998 2004 2007]
+MF2='norm':'trapmf',[2004 2007 2013 2016]
+MF3='noviy':'trapmf',[2013 2016 2025 2035]
+
+[Input2]
+Name='HorsePower'
+Range=[80 350]
+NumMFs=3
+MF1='malo':'trapmf',[60 80 140 170]
+MF2='norm':'trapmf',[140 170 230 260]
+MF3='mnogo':'trapmf',[230 260 350 400]
+
+[Input3]
+Name='Объем_двигателя'
+Range=[1.1 5]
+NumMFs=3
+MF1='malo':'trapmf',[1 1.1 1.5 1.8]
+MF2='norm':'trapmf',[1.5 1.8 2.5 3]
+MF3='bolshoi':'trapmf',[2.5 3 5 6]
+
+[Output1]
+Name='Цена_авто'
+Range=[250 2750]
+NumMFs=3
+MF1='malo':'trapmf',[200 250 750 1000]
+MF2='norm':'trapmf',[750 1000 1500 1750]
+MF3='mnogo':'trapmf',[1500 1750 2750 3000]
+
+[Rules]
